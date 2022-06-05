@@ -5,16 +5,20 @@ import { ref } from "vue";
 const { navbarTitle } = defineProps(["navbarTitle"]);
 const localDate = ref(new Date().toISOString().split("T")[0]);
 const router = useRouter();
-
-const onHouseClick = () => router.push("/");
 </script>
 
 <template>
   <nav class="navbar">
     <p>{{ navbarTitle }}</p>
     <div class="date">
+      <router-link to="/">
+        <p class="to-home">&#8962;</p>
+      </router-link>
+
+      <router-link to="/fonts">
+        <p class="to-fonts">&#945;</p>
+      </router-link>
       <p>{{ localDate }}</p>
-      <p class="to-home" @click="onHouseClick">&#8962;</p>
     </div>
   </nav>
   <div class="wrapper">
@@ -42,15 +46,23 @@ const onHouseClick = () => router.push("/");
     margin: 0;
   }
   .date {
-    @include display-flex(row, center, center, 20px);
+    @include display-flex(row, center, center, 10px);
 
-    .to-home {
+    a {
+      text-decoration: none;
+      color: $bg-dark-grey-color;
+    }
+
+    .to-home,
+    .to-fonts {
+      padding: 0 4px;
       font-size: 2rem;
       cursor: pointer;
       transition: all 0.35s;
 
       &:active {
-        color: green;
+        background: $bg-dark-grey-color;
+        color: $primary-green-color;
       }
     }
   }

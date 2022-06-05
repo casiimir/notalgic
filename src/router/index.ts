@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../pages/Home.vue";
+import FontSelection from "../pages/FontSelection.vue";
 import Reader from "../pages/Reader.vue";
 
 const routes = [
@@ -9,7 +10,12 @@ const routes = [
     component: Home,
   },
   {
-    path: "/Reader/:id",
+    path: "/fonts",
+    name: "FontSelection",
+    component: FontSelection,
+  },
+  {
+    path: "/reader/:id",
     name: "Reader",
     component: Reader,
   },

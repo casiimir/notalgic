@@ -1,0 +1,134 @@
+{
+  "fonts-list": [
+    {
+      "id": 1,
+      "name": "Azeret Mono",
+      "author": "Displaay"
+    },
+    {
+      "id": 2,
+      "name": "JetBrains Mono",
+      "author": "JetBrains"
+    },
+    {
+      "id": 3,
+      "name": "Syne Mono",
+      "author": "Bonjour Monde"
+    },
+    {
+      "id": 4,
+      "name": "Xanh Mono",
+      "author": "Yellow Foundry"
+    },
+    {
+      "id": 5,
+      "name": "DM Mono",
+      "author": "Colophon Foundry"
+    },
+    {
+      "id": 6,
+      "name": "Courier Prime",
+      "author": "Alan Dague-Greene"
+    },
+    {
+      "id": 7,
+      "name": "Fira Code",
+      "author": "Nikita Prokopov"
+    },
+    {
+      "id": 8,
+      "name": "B612 Mono",
+      "author": "PolarSys"
+    },
+    {
+      "id": 9,
+      "name": "Major Mono Display",
+      "author": "Emre Parlak"
+    },
+    {
+      "id": 10,
+      "name": "IBM Plex Mono",
+      "author": "Mike Abbink"
+    },
+    {
+      "id": 11,
+      "name": "Nanum Gothic Coding",
+      "author": "Sandoll"
+    },
+    {
+      "id": 12,
+      "name": "Overpass Mono",
+      "author": "Delve Withrington"
+    },
+    {
+      "id": 13,
+      "name": "Space Mono",
+      "author": "Colophon Foundry"
+    },
+    {
+      "id": 14,
+      "name": "Roboto Mono",
+      "author": "Christian Robertson"
+    },
+    {
+      "id": 15,
+      "name": "Fira Mono",
+      "author": "Carrois Apostrophe"
+    },
+    {
+      "id": 16,
+      "name": "Share Tech Mono",
+      "author": "Carrois Apostrophe"
+    },
+    {
+      "id": 17,
+      "name": "Cutive Mono",
+      "author": "Vernon Adams"
+    },
+    {
+      "id": 18,
+      "name": "Source Code Pro",
+      "author": "Paul D. Hunt"
+    },
+    {
+      "id": 19,
+      "name": "Oxygen Mono",
+      "author": "Vernon Adams"
+    },
+    {
+      "id": 20,
+      "name": "PT Mono",
+      "author": "PalaType"
+    },
+    {
+      "id": 21,
+      "name": "Ubuntu Mono",
+      "author": "Dalton Maag"
+    },
+    {
+      "id": 22,
+      "name": "Nova Mono",
+      "author": "Wojciech Kalinowski"
+    },
+    {
+      "id": 23,
+      "name": "VT323",
+      "author": "Peter Hull"
+    },
+    {
+      "id": 24,
+      "name": "Anonymous Pro",
+      "author": "Mark Simonson"
+    },
+    {
+      "id": 25,
+      "name": "Cousine",
+      "author": "Steve Matteson"
+    },
+    {
+      "id": 26,
+      "name": "Inconsolata",
+      "author": "Raph Levien"
+    }
+  ]
+}
