@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MessageList from "./components/MessageList.vue";
+</script>
 
 <template>
-  <h1>Test</h1>
+  <MessageList />
 </template>
 
 <style></style>

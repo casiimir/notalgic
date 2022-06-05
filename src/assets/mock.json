@@ -1,0 +1,19 @@
+{
+  "note-list": [
+    {
+      "id": 1,
+      "title": "Just a title",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!"
+    },
+    {
+      "id": 2,
+      "title": "Just another one",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!"
+    },
+    {
+      "id": 3,
+      "title": "Are you serious? Another one?!",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!"
+    }
+  ]
+}
