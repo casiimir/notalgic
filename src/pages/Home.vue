@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import MessageList from "../components/MessageList.vue";
+import NotesList from "../components/NotesList.vue";
 import DefaultLayout from "../layouts/DefaultLayout.vue";
 </script>
 
 <template>
   <DefaultLayout navbarTitle="Documents list">
-    <MessageList />
+    <NotesList />
   </DefaultLayout>
 </template>
 

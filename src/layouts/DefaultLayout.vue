@@ -23,6 +23,7 @@ const localDate = ref(new Date().toISOString().split("T")[0]);
   @include display-flex(row, space-between);
   margin: 0 20% 80px;
   padding: 5px 10px;
+
   background: $primary-green-color;
   font-size: 1.2rem;
   font-weight: bold;

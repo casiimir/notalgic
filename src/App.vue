@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import MessageList from "./components/MessageList.vue";
-import DefaultLayout from "./layouts/DefaultLayout.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <router-view />
