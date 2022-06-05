@@ -4,9 +4,7 @@ import DefaultLayout from "./layouts/DefaultLayout.vue";
 </script>
 
 <template>
-  <DefaultLayout navbarTitle="Document list">
-    <MessageList />
-  </DefaultLayout>
+  <router-view />
 </template>
 
 <style lang="scss">
