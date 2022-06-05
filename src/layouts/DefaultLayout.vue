@@ -1,14 +1,21 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import { ref } from "vue";
 
 const { navbarTitle } = defineProps(["navbarTitle"]);
 const localDate = ref(new Date().toISOString().split("T")[0]);
+const router = useRouter();
+
+const onHouseClick = () => router.push("/");
 </script>
 
 <template>
   <nav class="navbar">
     <p>{{ navbarTitle }}</p>
-    <p>{{ localDate }}</p>
+    <div class="date">
+      <p>{{ localDate }}</p>
+      <p class="to-home" @click="onHouseClick">&#8962;</p>
+    </div>
   </nav>
   <div class="wrapper">
     <slot></slot>
@@ -20,7 +27,8 @@ const localDate = ref(new Date().toISOString().split("T")[0]);
 @import "../styles/mixins";
 
 .navbar {
-  @include display-flex(row, space-between);
+  @include display-flex(row, space-between, center);
+
   margin: 0 20% 80px;
   padding: 5px 10px;
 
@@ -32,6 +40,19 @@ const localDate = ref(new Date().toISOString().split("T")[0]);
 
   p {
     margin: 0;
+  }
+  .date {
+    @include display-flex(row, center, center, 20px);
+
+    .to-home {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.35s;
+
+      &:active {
+        color: green;
+      }
+    }
   }
 }
 
