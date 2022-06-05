@@ -1,0 +1,14 @@
+@mixin display-flex(
+  $dir: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $gap: 0,
+  $wrap: no-wrap
+) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  wrap: $wrap;
+}
