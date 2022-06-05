@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from "../pages/Home.vue";
 import ColorSelection from "../pages/ColorSelection.vue";
 import FontSelection from "../pages/FontSelection.vue";
+import NewNote from "../pages/NewNote.vue";
 import Reader from "../pages/Reader.vue";
 
 const routes = [
@@ -10,7 +11,11 @@ const routes = [
     name: "Home",
     component: Home,
   },
-
+  {
+    path: "/new-note",
+    name: "NewNote",
+    component: NewNote,
+  },
   {
     path: "/colors",
     name: "ColorSelection",

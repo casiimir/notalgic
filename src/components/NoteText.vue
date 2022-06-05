@@ -15,10 +15,13 @@ const { note } = defineProps(["note"]);
 @import "../styles/variables.scss";
 
 .note {
+  margin: -40px 0 0 0;
+  padding: 0 0 0 10px;
+
   color: var(--primary-color);
-  text-shadow: 0 0 1px var(--primary-color);
-  line-height: 1.8rem;
   font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-shadow: 0 0 1px var(--primary-color);
 
   p {
     text-align: justify;

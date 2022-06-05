@@ -1,18 +1,43 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { ref } from "vue";
+import { useGeneralStore } from "../store";
 
-const { navbarTitle } = defineProps(["navbarTitle"]);
+const { navbarTitle } = defineProps({
+  navbarTitle: {
+    type: String,
+    required: false,
+    default: "",
+  },
+});
+
+const generalStore = useGeneralStore();
 const localDate = ref(new Date().toISOString().split("T")[0]);
 const router = useRouter();
+
+const titleInput = ref({ value: "" });
 </script>
 
 <template>
   <nav class="navbar">
-    <p>{{ navbarTitle }}</p>
+    <p v-if="navbarTitle.length" class="title-default">{{ navbarTitle }}</p>
+    <p v-else>
+      <input
+        class="title-input"
+        type="text"
+        :value="titleInput.value"
+        @input="(e) => (titleInput.value = e.target.value)"
+        :style="{ fontFamily: `${generalStore.getFontFamily}` }"
+        placeholder="Title here ..."
+      />
+    </p>
     <div class="date">
       <router-link to="/">
         <p class="to-home">&#8962;</p>
+      </router-link>
+
+      <router-link to="/new-note">
+        <p class="to-new-note">&#951;</p>
       </router-link>
 
       <router-link to="/fonts">
@@ -20,7 +45,7 @@ const router = useRouter();
       </router-link>
 
       <router-link to="/colors">
-        <p class="to-colors">&#9775;</p>
+        <p class="to-colors">&#950;</p>
       </router-link>
 
       <p>{{ localDate }}</p>
@@ -51,6 +76,25 @@ const router = useRouter();
   p {
     margin: 0;
   }
+
+  .title-default,
+  .title-input {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .title-input {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   .date {
     @include display-flex(row, center, center, 10px);
 
@@ -61,7 +105,8 @@ const router = useRouter();
 
     .to-home,
     .to-fonts,
-    .to-colors {
+    .to-colors,
+    .to-new-note {
       padding: 0 4px;
       font-size: 2rem;
       cursor: pointer;

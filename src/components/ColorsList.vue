@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onUpdated } from "vue";
+import { ref, computed } from "vue";
 import colorsList from "../assets/colorsList.json";
 import { useGeneralStore } from "../store";
 

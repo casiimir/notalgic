@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import DefaultLayout from "../layouts/DefaultLayout.vue";
-import FontsList from "../components/FontsList.vue";
+import AddNewNote from "../components/AddNewNote.vue";
+
+const { note } = defineProps(["note"]);
 </script>
 
 <template>
-  <DefaultLayout navbarTitle="Font setting">
-    <FontsList />
+  <DefaultLayout>
+    <AddNewNote />
   </DefaultLayout>
 </template>
 

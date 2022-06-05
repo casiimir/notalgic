@@ -4,7 +4,7 @@ import ColorsList from "../components/ColorsList.vue";
 </script>
 
 <template>
-  <DefaultLayout navbarTitle="Documents list">
+  <DefaultLayout navbarTitle="Color setting">
     <ColorsList />
   </DefaultLayout>
 </template>
