@@ -3,17 +3,20 @@
     {
       "id": 1,
       "title": "Just a title",
-      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!"
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!",
+      "time": "06/05/2022"
     },
     {
       "id": 2,
       "title": "Just another one",
-      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!"
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!",
+      "time": "01/05/2002"
     },
     {
       "id": 3,
       "title": "Are you serious? Another one?!",
-      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!"
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis minima aut harum placeat magnam ducimus labore! Nisi, beatae aspernatur. Ipsam!",
+      "time": "02/05/1980"
     }
   ]
 }
