@@ -18,6 +18,11 @@ const router = useRouter();
       <router-link to="/fonts">
         <p class="to-fonts">&#945;</p>
       </router-link>
+
+      <router-link to="/colors">
+        <p class="to-colors">&#9775;</p>
+      </router-link>
+
       <p>{{ localDate }}</p>
     </div>
   </nav>
@@ -27,6 +32,7 @@ const router = useRouter();
 </template>
 
 <style lang="scss" scoped>
+@import "../styles/global";
 @import "../styles/variables";
 @import "../styles/mixins";
 
@@ -36,11 +42,11 @@ const router = useRouter();
   margin: 0 20% 80px;
   padding: 5px 10px;
 
-  background: $primary-green-color;
+  background: var(--primary-color);
   font-size: 1.2rem;
   font-weight: bold;
   text-shadow: 0 0 1px $bg-dark-grey-color;
-  box-shadow: 0 0 3px $primary-green-color;
+  box-shadow: 0 0 3px var(--primary-color);
 
   p {
     margin: 0;
@@ -54,7 +60,8 @@ const router = useRouter();
     }
 
     .to-home,
-    .to-fonts {
+    .to-fonts,
+    .to-colors {
       padding: 0 4px;
       font-size: 2rem;
       cursor: pointer;
@@ -62,7 +69,7 @@ const router = useRouter();
 
       &:active {
         background: $bg-dark-grey-color;
-        color: $primary-green-color;
+        color: var(--primary-color);
       }
     }
   }

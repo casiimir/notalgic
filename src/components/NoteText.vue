@@ -15,8 +15,8 @@ const { note } = defineProps(["note"]);
 @import "../styles/variables.scss";
 
 .note {
-  color: $primary-green-color;
-  text-shadow: 0 0 1px $primary-green-color;
+  color: var(--primary-color);
+  text-shadow: 0 0 1px var(--primary-color);
   line-height: 1.8rem;
   font-size: 1.2rem;
 

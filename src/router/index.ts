@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../pages/Home.vue";
+import ColorSelection from "../pages/ColorSelection.vue";
 import FontSelection from "../pages/FontSelection.vue";
 import Reader from "../pages/Reader.vue";
 
@@ -8,6 +9,12 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+
+  {
+    path: "/colors",
+    name: "ColorSelection",
+    component: ColorSelection,
   },
   {
     path: "/fonts",

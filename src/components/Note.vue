@@ -19,17 +19,18 @@ const onCardClick = () => router.push(`/reader/${note.id - 1}`);
 </template>
 
 <style scoped lang="scss">
+@import "../styles/global.scss";
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 
 .note {
   padding: 14px 2px 0;
   min-width: 240px;
-  border: 1px solid $primary-green-color;
-  color: $primary-green-color;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 
-  text-shadow: 0 0 1px $primary-green-color;
-  box-shadow: 0 0 3px $primary-green-color;
+  text-shadow: 0 0 1px var(--primary-color);
+  box-shadow: 0 0 3px var(--primary-color);
   cursor: pointer;
   transition: all 0.35s;
 
@@ -43,7 +44,7 @@ const onCardClick = () => router.push(`/reader/${note.id - 1}`);
   .title {
     margin: 5px 0;
     padding: 5px;
-    background: $primary-green-color;
+    background: var(--primary-color);
     color: $bg-dark-grey-color;
     font-weight: bold;
     text-shadow: 0 0 1px $bg-dark-grey-color;
@@ -51,12 +52,12 @@ const onCardClick = () => router.push(`/reader/${note.id - 1}`);
   }
 
   &:hover {
-    background: $primary-green-color;
+    background: var(--primary-color);
     color: $bg-dark-grey-color;
 
     .title {
       background: $bg-dark-grey-color;
-      color: $primary-green-color;
+      color: var(--primary-color);
     }
   }
 }

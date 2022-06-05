@@ -16,6 +16,11 @@ const getFontFamily = computed(() => generalStore.getFontFamily);
 @import "./styles/global.scss";
 @import "./styles/variables.scss";
 
+:root {
+  --primary-color: #00ff00;
+  --secondary-color: #131313;
+}
+
 body {
   background: $bg-dark-grey-color;
   font-family: "VT323", monospace;

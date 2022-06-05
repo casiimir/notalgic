@@ -12,7 +12,7 @@ const noteList = noteListMock["note-list"];
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 

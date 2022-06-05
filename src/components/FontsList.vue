@@ -4,7 +4,7 @@ import fontsList from "../assets/fontsList.json";
 import { useGeneralStore } from "../store";
 
 const generalStore = useGeneralStore();
-const fontsLists = ref(fontsList);
+const fonts = ref(fontsList);
 
 const onFontNameClick = (fontName: string) =>
   generalStore.setFontFamily(fontName);
@@ -12,13 +12,9 @@ const onFontNameClick = (fontName: string) =>
 
 <template>
   <table class="font-table">
-    <tr v-for="font in fontsList['fonts-list']" :key="font.id">
+    <tr v-for="font in fonts['fonts-list']" :key="font.id">
       <td
-        @click="
-          {
-            onFontNameClick(font.name);
-          }
-        "
+        @click="onFontNameClick(font.name)"
         :style="{ fontFamily: `${font.name}` }"
       >
         {{ font.name }}
@@ -28,7 +24,7 @@ const onFontNameClick = (fontName: string) =>
   </table>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../styles/global.scss";
 @import "../styles/variables.scss";
 
@@ -42,8 +38,8 @@ const onFontNameClick = (fontName: string) =>
     @include display-flex(row, space-between);
 
     width: 100%;
-    color: $primary-green-color;
-    text-shadow: 0 0 1px $primary-green-color;
+    color: var(--primary-color);
+    text-shadow: 0 0 1px var(--primary-color);
 
     td {
       &:nth-of-type(1) {
@@ -51,7 +47,7 @@ const onFontNameClick = (fontName: string) =>
         cursor: pointer;
 
         &:active {
-          background: $primary-green-color;
+          background: var(--primary-color);
           color: $bg-dark-grey-color;
         }
       }

@@ -1,0 +1,44 @@
+{
+  "colors-list": [
+    {
+      "id": 1,
+      "name": "yellow",
+      "code": "#E6FB04"
+    },
+    {
+      "id": 2,
+      "name": "red",
+      "code": "#FF3300"
+    },
+    {
+      "id": 3,
+      "name": "green",
+      "code": "#00FF00"
+    },
+    {
+      "id": 4,
+      "name": "azure",
+      "code": "#00FFFF"
+    },
+    {
+      "id": 5,
+      "name": "blue",
+      "code": "#0033FF"
+    },
+    {
+      "id": 6,
+      "name": "pink",
+      "code": "#FF00FF"
+    },
+    {
+      "id": 7,
+      "name": "dark-pink",
+      "code": "#CC00FF"
+    },
+    {
+      "id": 8,
+      "name": "purple",
+      "code": "#9900FF"
+    }
+  ]
+}
