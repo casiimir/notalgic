@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useGeneralStore } from "./store/index";
-const generalStore = useGeneralStore();
 
+const generalStore = useGeneralStore();
 const getFontFamily = computed(() => generalStore.getFontFamily);
 </script>
 
