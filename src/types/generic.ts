@@ -5,4 +5,17 @@ export interface Note {
   title: string;
 }
 
+export interface UserNote {
+  title: string;
+  content: string;
+}
+
+export interface FirebaseAddCollectionNote {
+  collection: string;
+  document: string;
+  data: UserNote;
+}
+
+export type UserNotes = UserNote[];
+
 export type NoteList = Note[];

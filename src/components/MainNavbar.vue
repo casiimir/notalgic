@@ -16,7 +16,7 @@ const router = useRouter();
 const generalStore = useGeneralStore();
 const firebaseStore = useFirebaseStore();
 const localDate = ref(new Date().toISOString().split("T")[0]);
-const titleInput = ref({ value: "" });
+const titleInput = generalStore.noteTitle;
 const getUserByFirebase = computed(() => firebaseStore.getUser);
 
 const loginByGoogle = () => firebaseStore.setUserByGoogle();
@@ -31,7 +31,7 @@ const signOutByGoogle = () => firebaseStore.removeUserByGoogle();
         class="title-input"
         type="text"
         :value="titleInput.value"
-        @input="(e) => (titleInput.value = e.target.value)"
+        @input="(e) => generalStore.setNoteTitle(e.target.value)"
         :style="{ fontFamily: `${generalStore.getFontFamily}` }"
         placeholder="Title here ..."
       />

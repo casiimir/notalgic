@@ -1,9 +1,21 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useGeneralStore } from "../store";
+import { useFirebaseStore } from "../store/firebaseStore";
 
 const generalStore = useGeneralStore();
+const firebaseStore = useFirebaseStore();
 const textareaInput = ref({ value: "" });
+
+const onAddNewNote = () =>
+  firebaseStore.addNoteToDB({
+    collection: firebaseStore.getUser.uid,
+    document: generalStore.noteTitle,
+    data: {
+      title: generalStore.noteTitle,
+      content: textareaInput.value.value,
+    },
+  });
 </script>
 
 <template>
@@ -18,6 +30,9 @@ const textareaInput = ref({ value: "" });
       @input="(e) => (textareaInput.value = e.target.value)"
       placeholder="Add the content here ..."
     ></textarea>
+    <button v-if="firebaseStore.getUser.uid" @click="onAddNewNote">
+      Add <i class="fas fa-notes-medical"></i>
+    </button>
   </div>
 </template>
 
