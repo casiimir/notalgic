@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { ref, computed, Ref } from "vue";
+import { ref, computed, Ref, onMounted } from "vue";
 import { Router, useRouter } from "vue-router";
-import { Note, NoteList } from "../types/generic";
+import { useFirebaseStore } from "../store/firebaseStore";
 
 import DefaultLayout from "../layouts/DefaultLayout.vue";
 import NoteText from "../components/NoteText.vue";
-import noteListMock from "../assets/mock.json";
 
 const router: Router = useRouter();
-const noteList: Ref<NoteList> = ref(noteListMock["note-list"]);
+const firebaseStore = useFirebaseStore();
+const userNotes: any = computed(() => firebaseStore.getUserNotes);
 
 const getNoteByParam = computed(
-  () => noteList.value[router.currentRoute.value.params.id as any]
+  () => userNotes.value[router.currentRoute.value.params.id as any]
 );
+
+onMounted(() => !userNotes.value.length && router.push("/"));
 </script>
 
 <template>
