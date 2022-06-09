@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { useGeneralStore } from "../store";
 import { useFirebaseStore } from "../store/firebaseStore";
+import { v4 as uuidv4 } from "uuid";
 
 const generalStore = useGeneralStore();
 const firebaseStore = useFirebaseStore();
@@ -14,6 +15,8 @@ const onAddNewNote = () =>
     data: {
       title: generalStore.noteTitle,
       content: textareaInput.value.value,
+      id: uuidv4(),
+      time: new Date().toISOString().split("T")[0],
     },
   });
 </script>

@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useGeneralStore } from "./store/index";
+import { useFirebaseStore } from "./store/firebaseStore";
 
 const generalStore = useGeneralStore();
+const firebaseStore = useFirebaseStore();
 const getFontFamily = computed(() => generalStore.getFontFamily);
+
+onMounted(() => {
+  firebaseStore.setUserByLocalStorage();
+});
 </script>
 
 <template>

@@ -5,21 +5,29 @@ import { useFirebaseStore } from "../store/firebaseStore";
 
 import DefaultLayout from "../layouts/DefaultLayout.vue";
 import NoteText from "../components/NoteText.vue";
+import { Note } from "../types/generic";
 
 const router: Router = useRouter();
 const firebaseStore = useFirebaseStore();
 const userNotes: any = computed(() => firebaseStore.getUserNotes);
+const formatTitleFromUrl = (title: string) => title.replaceAll("-", " ");
 
-const getNoteByParam = computed(
-  () => userNotes.value[router.currentRoute.value.params.id as any]
+const getNoteByQueryParam = computed(() =>
+  userNotes.value.length
+    ? userNotes.value.find(
+        (note: Note) =>
+          note.title ===
+          formatTitleFromUrl(router.currentRoute.value.params.id as string)
+      )
+    : router.push("/")
 );
 
 onMounted(() => !userNotes.value.length && router.push("/"));
 </script>
 
 <template>
-  <DefaultLayout :navbarTitle="getNoteByParam.title">
-    <NoteText :note="getNoteByParam" />
+  <DefaultLayout :navbarTitle="getNoteByQueryParam.title">
+    <NoteText :note="getNoteByQueryParam" />
   </DefaultLayout>
 </template>
 

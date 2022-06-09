@@ -5,7 +5,10 @@ import { computed } from "vue";
 const { note } = defineProps(["note"]);
 const router = useRouter();
 
-const onCardClick = () => router.push(`/reader/${note.id - 1}`);
+const formatTitleInUrl = (title: string) => title.replaceAll(" ", "%2D");
+
+const onCardClick = () =>
+  router.push(`/reader/${formatTitleInUrl(note.title)}`);
 </script>
 
 <template>

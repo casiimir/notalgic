@@ -36,13 +36,26 @@ export const useFirebaseStore = defineStore({
         payload.data
       ).then(() => this.getNotesFromDB(this.getUser.uid));
     },
+    setUserByLocalStorage() {
+      this.user = JSON.parse(localStorage.getItem("notalgic-user") || "");
+      this.getNotesFromDB(this.getUser.uid);
+    },
     setUserByGoogle() {
       signInWithPopup(auth, provider)
-        .then((accountRes) => (this.user = accountRes.user))
+        .then((accountRes) => {
+          this.user = accountRes.user;
+          localStorage.setItem(
+            "notalgic-user",
+            JSON.stringify(accountRes.user)
+          );
+        })
         .then(() => this.getNotesFromDB(this.getUser.uid));
     },
     removeUserByGoogle() {
-      signOut(auth).then(() => (this.user = { uid: "" }));
+      signOut(auth).then(() => {
+        this.user = { uid: "" };
+        localStorage.removeItem("notalgic-user");
+      });
     },
   },
 });

@@ -13,7 +13,7 @@ export interface UserNote {
 export interface FirebaseAddCollectionNote {
   collection: string;
   document: string;
-  data: UserNote;
+  data: Note;
 }
 
 export type UserNotes = UserNote[];

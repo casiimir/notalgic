@@ -14,7 +14,7 @@ const userNotes: ComputedRef<{}> = computed(() => firebaseStore.getUserNotes);
     <Note v-for="note in userNotes" :key="note.id" :note="note" />
   </div>
   <div v-else>
-    <p>No data ...</p>
+    <p class="no-login-msg">Please log in for your data ...</p>
   </div>
 </template>
 
@@ -22,8 +22,8 @@ const userNotes: ComputedRef<{}> = computed(() => firebaseStore.getUserNotes);
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 
-p {
-  color: #00ff00;
+.no-login-msg {
+  color: var(--primary-color);
 }
 
 .note-wrapper {
