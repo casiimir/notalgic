@@ -25,7 +25,9 @@ const signOutByGoogle = () => firebaseStore.removeUserByGoogle();
 
 <template>
   <nav class="navbar">
-    <p v-if="navbarTitle.length" class="title-default">{{ navbarTitle }}</p>
+    <p v-if="navbarTitle.length" class="title-default vibrant">
+      {{ navbarTitle }}
+    </p>
     <p v-else>
       <input
         class="title-input"
