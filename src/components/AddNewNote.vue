@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import { useGeneralStore } from "../store";
 import { useFirebaseStore } from "../store/firebaseStore";
 import { v4 as uuidv4 } from "uuid";
 
+import AlertModal from "./AlertModal.vue";
+
+const router = useRouter();
 const generalStore = useGeneralStore();
 const firebaseStore = useFirebaseStore();
 const textareaInput = ref({ value: "" });
 
-const onAddNewNote = () =>
+const onAddNewNote = () => {
   firebaseStore.addNoteToDB({
     collection: firebaseStore.getUser.uid,
     document: generalStore.noteTitle,
@@ -19,6 +23,12 @@ const onAddNewNote = () =>
       time: new Date().toISOString().split("T")[0],
     },
   });
+  if (textareaInput.value.value.length && generalStore.noteTitle.length) {
+    textareaInput.value.value = "";
+    generalStore.setNoteTitle("");
+    router.push("/");
+  }
+};
 </script>
 
 <template>
@@ -32,10 +42,15 @@ const onAddNewNote = () =>
       :value="textareaInput.value"
       @input="(e) => (textareaInput.value = e.target.value)"
       placeholder="Add the content here ..."
+      required
     ></textarea>
     <button v-if="firebaseStore.getUser.uid" @click="onAddNewNote">
-      Add <i class="fas fa-notes-medical"></i>
+      ADD <i class="fas fa-notes-medical"></i>
     </button>
+    <AlertModal
+      v-if="!textareaInput.value.length && !generalStore.noteTitle.length"
+      warningMessage="Add title and/or content!"
+    />
   </div>
 </template>
 
