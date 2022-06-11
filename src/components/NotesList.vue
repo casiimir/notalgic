@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ComputedRef } from "vue";
 import { useFirebaseStore } from "../store/firebaseStore";
+import AlertModal from "./AlertModal.vue";
 import Note from "./Note.vue";
 
 const firebaseStore = useFirebaseStore();
@@ -14,7 +15,7 @@ const userNotes: ComputedRef<{}> = computed(() => firebaseStore.getUserNotes);
     <Note v-for="note in userNotes" :key="note.id" :note="note" />
   </div>
   <div v-else>
-    <p class="no-login-msg">Please log in for your data ...</p>
+    <AlertModal warningMessage="Please log in for your data ..." />
   </div>
 </template>
 

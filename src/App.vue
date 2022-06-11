@@ -66,6 +66,21 @@ body {
   }
 }
 
+button {
+  padding: 5px 15px;
+  color: var(--primary-color);
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.35s;
+
+  &:active {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+  }
+}
+
 .refresh {
   position: absolute;
   bottom: 100%;

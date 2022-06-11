@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import DefaultLayout from "../layouts/DefaultLayout.vue";
 import AddNewNote from "../components/AddNewNote.vue";
-
-const { note } = defineProps(["note"]);
 </script>
 
 <template>
