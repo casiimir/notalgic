@@ -7,12 +7,12 @@ import Note from "./Note.vue";
 const firebaseStore = useFirebaseStore();
 
 const user = computed(() => firebaseStore.getUser);
-const userNotes: ComputedRef<{}> = computed(() => firebaseStore.getUserNotes);
+const userNotes: any = computed(() => firebaseStore.getUserNotes);
 </script>
 
 <template>
   <div v-if="user.uid?.length" class="note-wrapper">
-    <Note v-for="note in userNotes" :key="note.id" :note="note" />
+    <Note v-for="note in userNotes" :key="note?.id" :note="note" />
   </div>
   <div v-else>
     <AlertModal warningMessage="Please log in for your data ..." />

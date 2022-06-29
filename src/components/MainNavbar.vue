@@ -16,11 +16,13 @@ const router = useRouter();
 const generalStore = useGeneralStore();
 const firebaseStore = useFirebaseStore();
 const localDate = ref(new Date().toISOString().split("T")[0]);
-const titleInput = generalStore.noteTitle;
-const getUserByFirebase = computed(() => firebaseStore.getUser);
+const titleInput: any = generalStore.noteTitle;
+const getUserByFirebase: any = computed(() => firebaseStore.getUser);
 
 const loginByGoogle = () => firebaseStore.setUserByGoogle();
 const signOutByGoogle = () => firebaseStore.removeUserByGoogle();
+
+const onInputTitle = (e: any) => generalStore.setNoteTitle(e?.target?.value);
 </script>
 
 <template>
@@ -32,8 +34,8 @@ const signOutByGoogle = () => firebaseStore.removeUserByGoogle();
       <input
         class="title-input"
         type="text"
-        :value="titleInput.value"
-        @input="(e) => generalStore.setNoteTitle(e.target.value)"
+        :value="titleInput?.value"
+        @input="onInputTitle"
         :style="{ fontFamily: `${generalStore.getFontFamily}` }"
         placeholder="Title here ..."
       />
@@ -65,7 +67,7 @@ const signOutByGoogle = () => firebaseStore.removeUserByGoogle();
       <p v-else @click="signOutByGoogle" class="login-by-google">-</p>
 
       <div class="user-info">
-        <p v-if="getUserByFirebase.uid">{{ getUserByFirebase.email }}</p>
+        <p v-if="getUserByFirebase.uid">{{ getUserByFirebase?.email }}</p>
         <p v-else>No user logged ..</p>
         <p>{{ localDate }}</p>
       </div>

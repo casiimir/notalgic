@@ -29,6 +29,8 @@ const onAddNewNote = () => {
     router.push("/");
   }
 };
+
+const onInputContent = (e: any) => (textareaInput.value = e?.target?.value);
 </script>
 
 <template>
@@ -40,7 +42,7 @@ const onAddNewNote = () => {
       cols="30"
       rows="10"
       :value="textareaInput.value"
-      @input="(e) => (textareaInput.value = e.target.value)"
+      @input="onInputContent"
       placeholder="Add the content here ..."
       required
     ></textarea>
