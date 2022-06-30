@@ -30,7 +30,8 @@ const onAddNewNote = () => {
   }
 };
 
-const onInputContent = (e: any) => (textareaInput.value = e?.target?.value);
+const onInputContent = (e: any) =>
+  (textareaInput.value.value = e?.target?.value);
 </script>
 
 <template>
@@ -50,7 +51,7 @@ const onInputContent = (e: any) => (textareaInput.value = e?.target?.value);
       ADD <i class="fas fa-notes-medical"></i>
     </button>
     <AlertModal
-      v-if="!textareaInput.value.length && !generalStore.noteTitle.length"
+      v-if="!textareaInput.value.length >= 1 && !generalStore.noteTitle.length"
       warningMessage="Add title and/or content!"
     />
   </div>
