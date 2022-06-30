@@ -1,16 +1,44 @@
-# Vue 3 + TypeScript + Vite
+<h1>Notalgic - NOTe tAker for nostaLGIC</h1>
+<h2>Take note in a different (vintage) way</h2>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<p align="center">
+  <img src="./public/img/mockup1.jpg" alt="notalgic"/>
+</p>
 
-## Recommended IDE Setup
+<hr>
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+<img align="right" src="./public/img/mockup2.jpg" alt="notalgic" width=150/>
 
-## Type Support For `.vue` Imports in TS
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+<h2>For whom codes all the day ⌨️, and old-fashioned people! 🕰️</h2>
+<p>
+  Notalgic is a very useful web app that's basically create notes but in a different way! It makes possibile access to your Google account in order to write stunning text. Available in any (vintage) font - more than 25! - and different stunning led neon colors!
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+The web app takes the user by the hand and guides him towards infinite cascades of words: writers, coders, artists, students, come here! There's an app for you!
+</p>
+<hr>
+
+<img align="right" src="./public/img/mockup3.png" alt="notalgic" width=150/>
+
+<br><br>
+<h2>A (very) strange tale... ⏳</h2>
+<ol>
+  <li>VUE 3</li>
+  <li>Pinia</li>
+  <li>Typescript</li>
+  <li>Vite</li>
+  <li>Nginx</li>
+  <li>Linode</li>
+  <li>Firebase</li>
+  <li>...</li>
+</ol>
+
+<hr>
+
+<h3>More info about?</h3>
+<a href="https://casiimir.hashnode.dev/notalgic-note-taker-for-nostalgic">Follow this link to Hashnode</a>
+
+<h2>MIT License</h2>
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
