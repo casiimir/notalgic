@@ -17,7 +17,7 @@ const { navbarTitle } = defineProps({
   </div>
   <footer class="footer">
     Made for <a href="https://www.linode.com/">Linode</a> and
-    <a href="hashnode">Hashnode</a> hackathon with 💚
+    <a href="https://hashnode.com/">Hashnode</a> hackathon with 💚
   </footer>
 </template>
 

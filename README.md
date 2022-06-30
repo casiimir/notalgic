@@ -40,5 +40,6 @@ The web app takes the user by the hand and guides him towards infinite cascades 
 <a href="https://casiimir.hashnode.dev/notalgic-note-taker-for-nostalgic">Follow this link to Hashnode</a>
 
 <h2>MIT License</h2>
+<span>Hashnode, Linode, Linode Hackathon</span>
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
