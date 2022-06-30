@@ -15,6 +15,10 @@ const { navbarTitle } = defineProps({
   <div class="wrapper">
     <slot></slot>
   </div>
+  <footer class="footer">
+    Made for <a href="https://www.linode.com/">Linode</a> and
+    <a href="hashnode">Hashnode</a> hackathon with 💚
+  </footer>
 </template>
 
 <style lang="scss" scoped>
@@ -24,5 +28,16 @@ const { navbarTitle } = defineProps({
 
 .wrapper {
   margin: 20px 20%;
+}
+footer {
+  color: var(--primary-color);
+  position: absolute;
+  top: 98vh;
+
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    color: white;
+  }
 }
 </style>
